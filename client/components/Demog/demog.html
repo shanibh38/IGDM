@@ -1,0 +1,53 @@
+<div class="main_tit">First a Few Questions</div>
+<br>
+<form action="" name="regForm" novalidate>
+    <table>
+        <tr>
+            <td>
+                <span class="sub_tit">Amazon Worker ID</span>
+            </td>
+            <td>
+                <input name="workerID" type="text" ng-model="workerID" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="sub_tit">Age</span>
+            </td>
+            <td>
+                <input name="age" type="number" min="6" max="120" ng-model="age" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="sub_tit">Gender</span>
+            </td>
+            <td>
+                <select name="gender" ng-model="gender" required>
+                    <option value="">Select one...</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="sub_tit">Education</span>
+            </td>
+            <td>
+                <select name="education" ng-model="education" required>
+                    <option value="">Select one...</option>
+                    <option value="Less than High School">Less than High School</option>
+                    <option value="High School/GED">High School/GED</option>
+                    <option value="College">College</option>
+                    <option value="Graduate Degree">Graduate Degree</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+    <br>
+</form>
+<button type="submit" ng-click="dmgCtrl.moveDmg()" ng-disabled="regForm.$invalid">Continue</button>
+<!-- <button ng-click="dmgCtrl.moveDmg()" ng-disabled="regForm.$invalid">Continue</button> -->

@@ -1,0 +1,96 @@
+<div class="main_tit">Learn the game</div>
+<br>
+<div ng-click="lrnCtrl.focus1()">
+
+    <span class="sub_tit">Wally (the player) -</span>    <img src="../../gfx/player.png" width="23px" height="23px" />
+    <br>
+    <span class="sub_tit">Wall (light blue / purple)-</span>    <img src="../../gfx/block.png" width="23px" height="23px"/> / <img src="../../gfx/block2.png"  width="23px" height="23px"/>
+    <br>
+    <span class="sub_tit">Box (brown / purple) -</span>    <img src="../../gfx/box.png"  width="23px" height="23px"/> / <img src="../../gfx/purpBox.png" width="23px" height="23px"/>
+    <br>
+    <span class="sub_tit">Spot (blue / orange) -</span>    <img src="../../gfx/spot2.png" width="21px" height="21px" /> / <img src="../../gfx/spot.png"  width="23px" height="23px"/>
+    <br>
+    <span class="sub_tit">Box on spot (orange / light purple) -</span>   <img src="../../gfx/bspot2.png" width="23px" height="23px"/> / <img src="../../gfx/bspot.png" width="23px" height="23px"/>
+    <br><br><br>
+
+    
+    <span class="sub_tit">1. Levels for moving box to the right place (one of the spots) -</span>
+    <br>
+    <img src="../../gfx/inst1.png" width="200px" />
+    <img src="../../gfx/2.PNG" width="200px" />
+    <img src="../../gfx/21.PNG" width="191px" />
+    <img src="../../gfx/22.PNG" width="195px" />
+    <img src="../../gfx/3.PNG" width="192px" />
+    <br>
+
+    <br>
+    <span class="sub_tit"> 2. Losing position -</span> state that prevents you from bringing the boxes to their spots.
+    <br>
+    <img src="../../gfx/loosingState.PNG" width="200px" />
+    <img src="../../gfx/loosingState2.PNG" width="200px" />
+    <br>
+    <span class="sub_tit">3. Winning position - </span> state where all the boxes are in the spots.
+    <br>
+    <img src="../../gfx/WIN.JPG" width="200px" />
+    <br>
+    <br>
+</div>
+
+<div class="row">
+    <div class="column" ng-click="lrnCtrl.focus1()">
+            <span class="sub_tit">Understanding Quiz :</span> For each picture, answer if the player can win or can not (lose).<br>
+            You can use the game to answer the qustions.
+        <form name="learnForm">
+            <br> 1.
+            <img src="../../gfx/level1a.JPG" width="200px" height="250px" />
+            <select name="uq1" id="under_quiz_1" ng-model="uq1" required>
+                <option value=""></option>
+                <option value="Win">Win</option>
+                <option value="Lose">Lose</option>
+            </select>
+            <!-- <br> -->
+            2.
+            <img src="../../gfx/level1b.JPG" width="200" height="250px" />
+            <select name="uq2" id="under_quiz_2" ng-model="uq2" required>
+                <option value=""></option>
+                <option value="Win">Win</option>
+                <option value="Lose">Lose</option>
+            </select>
+            <br> 3.
+            <img src="../../gfx/level1c.JPG" width="200px" height="250px" />
+            <select name="uq3" id="under_quiz_3" ng-model="uq3" required>
+                <option value=""></option>
+                <option value="Win">Win</option>
+                <option value="Lose">Lose</option>
+            </select>
+            <!-- <br> -->
+            4.
+            <img src="../../gfx/level1d.JPG" width="200px" height="250px" />
+            <select name="uq4" id="under_quiz_4" ng-model="uq4" required>
+                <option value=""></option>
+                <option value="Win">Win</option>
+                <option value="Lose">Lose</option>
+            </select>
+            <br>
+        </form>
+    </div>
+    
+    <div class="column" ng-click="lrnCtrl.focus2()">
+            For focus the game - click on the area adjacent to the game.<br>
+            For undo the focus - click on any other area not adjacent to the game.<br><br>
+        <div id="experiment33">
+            <div id="experiment3" class="page">
+                <div id="widget-container">
+                    <!-- <code></code> -->
+                    <div id="canvas-container"></div>
+                    <div id="buttons-container">
+                        <button id="reset" class="reset" ng-click="lrnCtrl.reset()">Reset</button>
+                        <button id="undo" class="undo" ng-click="lrnCtrl.undo()"> Undo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button ng-click="lrnCtrl.submit_learn()" ng-disabled="learnForm.$invalid">Submit</button>

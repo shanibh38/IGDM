@@ -1,0 +1,52 @@
+.about{
+    text-align: left;
+    background-color: hsla(0, 0%, 100%, 0.65); 
+    width: 80%;
+} 
+.column {
+	float: left;
+	width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+body {
+    height: 100%;
+    color: rgb(97, 93, 93);
+    line-height: 1.5;
+    font-family: Calibri, cursive;
+}
+.main_tit {
+	font-size: 45px;
+	font-weight : bold;
+	text-align: left;
+	color: rgb(29, 3, 90);
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.sub_tit {
+	font-size: 18px;
+	font-weight : bold;
+	color: darkblue;
+}
+
+button
+{	
+	font-size: 18px;
+	background: white;
+	font-weight : bold;
+	color: darkblue;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}

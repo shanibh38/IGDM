@@ -1,0 +1,122 @@
+<div class="main_tit">Quiz - Q5</div>
+<div ng-click="quizCtrl3.focus1()">
+    <div class="sub_tit">Note that to win, you have to place all the boxes to their hole in minimum moves.
+        <br> THERE IS NO IMPORTANCE TO THE ORDER OF THE BOXE'S NUMBER !!
+        <br> You have 15 minutes to solve the problem and answer the questions below.</div>
+    For focus the game - click on the area adjacent to the game, and for undo the focus - click on any other area not adjacent
+    to the game.
+    <div class="sub_tit">
+        <br> Timer :
+        <span id="demo3"></span>
+        <br>
+        <span>Number of moves : {{movesQuiz3}} </span>
+        <br>
+    </div>
+</div>
+<div ng-click="quizCtrl3.focus2()">
+    <div id="experiment1" class="page">
+        <div id="widget-container">
+            <div id="canvas-container">
+
+            </div>
+            <div id="buttons-container">
+                <button id="reset" class="reset" ng-disabled="stopQuiz3" ng-click="quizCtrl3.reset()">Reset</button>
+                <button id="undo" class="undo" ng-disabled="stopQuiz3" ng-click="quizCtrl3.undo()"> Undo</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-click="quizCtrl3.focus1()">
+    <form name="quiz3Form" novalidate>
+        <p>1) What is the minimum moves you consider required to reach the goal?
+            <input name="moves" type="number" min="1" ng-model="moves" required/>
+        </p>
+        <p>2) Who is the first box you chose to <b>move</b> ?
+            <select name="uqf" id="under_quiz3_first" ng-model="uqf" required>
+                <option value=""></option>
+                <option value="1">Box number 1</option>
+                <option value="2">Box number 2</option>
+                <option value="3">Box number 3</option>
+                <option value="4">Box number 4</option>
+                <option value="5">Box number 5</option>
+                <option value="6">Box number 6</option>
+            </select>
+        </p>
+        <p>3) Given your first choice (in the previous question), Who is the second box you chose to <b>move</b> (after you finish to move with the first one) ?
+            <select name="uqs" id="under_quiz3_sec" ng-model="uqs" required>
+                <option value=""></option>
+                <option value="1">Box number 1</option>
+                <option value="2">Box number 2</option>
+                <option value="3">Box number 3</option>
+                <option value="4">Box number 4</option>
+                <option value="5">Box number 5</option>
+                <option value="6">Box number 6</option>
+            </select>
+        </p>
+    </form>
+    <b>You have to <span style="font-size: 25px; color: black">fill in all</span> the questions and <span style="font-size: 25px; color: black">solve</span> the game to continue.</b><br>
+    <span ng-hide="!quizCtrl3.contToTOM">
+        <button ng-click="quizCtrl3.checkFirstQuiz()" ng-disabled="!(!(!(stopQuiz3||isExpired3)||quiz3Form.$invalid))">Continue</button>
+    </span>
+    <div ng-hide="quizCtrl3.contToTOM">
+        <p>Out of the people trying to solve question 1, how many, do you estimate, will select each of the 5 options below
+            [including, of course, the one you chose]?
+            <br> Try and guess which percentage of the people who answered question 1 picked the correct answer? </p>
+            0-39 moves :
+            <input name="firstR" type="number" min="0" ng-model="firstR" required/>
+            <br> 40-79 moves:
+            <input name="secR" type="number" min="0" ng-model="secR" required/>
+            <br> 80-109 moves:
+            <input name="thirdR" type="number" min="0" ng-model="thirdR" required/>
+            <br> 110-139 moves:
+            <input name="forthR" type="number" min="0" ng-model="forthR" required/>
+            <br> 140+ moves:
+            <input name="fiveR" type="number" min="0" ng-model="fiveR" required/>
+        <br>
+        <p>Out of the people trying to solve question 2, how many, do you estimate, will select each of the 8 options below
+            [including, of course, the one you chose]?
+            <br>Try and guess which percentage of the people who answered question 2 picked the correct answer?</p>
+        First box is number 1 :
+        <input name="firstB1" type="number" min="0" ng-model="firstB1" required/>
+        <br> First box is number 2 :
+        <input name="firstB2" type="number" min="0" ng-model="firstB2" required/>
+        <br> First box is number 3 :
+        <input name="firstB3" type="number" min="0" ng-model="firstB3" required/>
+        <br> First box is number 4 :
+        <input name="firstB4" type="number" min="0" ng-model="firstB4" required/>
+        <br> First box is number 5 :
+        <input name="firstB5" type="number" min="0" ng-model="firstB5" required/>
+        <br> First box is number 6 :
+        <input name="firstB6" type="number" min="0" ng-model="firstB6" required/>
+        <br>
+
+        <p>Out of the people trying to solve question 3, how many, do you estimate, will select each of the 8 options below
+            [including, of course, the one you chose]?
+            <br>Try and guess which percentage of the people who answered question 3 picked the correct answer?</p> Second box
+        is number 1 :
+        <input name="secondB1" type="number" min="0" ng-model="secondB1" required/>
+        <br> Second box is number 2 :
+        <input name="secondB2" type="number" min="0" ng-model="secondB2" required/>
+        <br> Second box is number 3 :
+        <input name="secondB3" type="number" min="0" ng-model="secondB3" required/>
+        <br> Second box is number 4 :
+        <input name="secondB4" type="number" min="0" ng-model="secondB4" required/>
+        <br> Second box is number 5 :
+        <input name="secondB5" type="number" min="0" ng-model="secondB5" required/>
+        <br> Second box is number 6 :
+        <input name="secondB6" type="number" min="0" ng-model="secondB6" required/>
+        <br>
+        <br>
+        <span style="font-weight: bold; color: black">
+            *** If you choose to provide only part of the predicted distributions, the remaining percentages (out of 100) will split
+            equally among the other options of the question. ***
+        </span>
+        <br>
+        <br>
+        <button type="button" ng-click="quizCtrl3.moveDmg()" ng-confirm-click="If one of your fields are empty, they will filled by the rest of the precentages left equaly, Are you sure you want to continue?"
+            confirm-settings="{size: 'sm'}">Continue</button>
+
+    </div>
+
+</div>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="citiesApp">
+    <head>
+            <link rel="shortcut icon" href="">
+        <title>Cities App</title>
+        <script src="https://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="jquery-1.8.2.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="experiment-style.css">
+        <script type='text/javascript' >
+            E = {};
+        </script>
+</head>
+     
+        <body>
+            <div style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;position: fixed; color:whitesmoke;background-color: navy ; text-align: center; height:5%;overflow: hidden;margin:0;padding:0;display: block;width:100%; top:0;">Intelligent Group Decision Making</div>
+                <br>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>       
+        <script src="app.js" ></script>
+        <script src="myCtrl.js" ></script>
+        <script src="components/Demog/demogController.js" ></script>
+        <script src="components/Consent/consentCtrl.js" ></script>
+        <script src="components/Instructions/instController.js" ></script>
+        <script src="components/Final/finalController.js" ></script>
+        <script src="components/Quiz1/quizController.js" ></script>
+        <script src="components/Quiz2/quizController2.js" ></script>
+        <script src="components/Quiz3/quizController3.js" ></script>
+        <script src="components/BetweenQuiz12/BetweenQuiz12Ctrl.js" ></script>
+        <script src="components/BetweenQuiz23/BetweenQuiz23Ctrl.js" ></script>
+        <script src="components/LearnGame/LearnController.js" ></script>
+
+        <script src="plant.js"></script>
+        <script src="sokoban-test.js"></script>
+        
+        <script src="skob.js"></script>
+
+
+        
+            
+                        <!-- preload images -->
+                        <img src="gfx/grass.png" alt="" style="display:none" />
+                        <img src="gfx/floor.png" alt="" style="display:none" />
+                        <img src="gfx/block.png" alt="" style="display:none" />
+                        <img src="gfx/player.png" alt="" style="display:none" />
+                        <img src="gfx/inst1.png" alt="" style="display:none" />
+                        <img src="gfx/2.PNG" alt="" style="display:none" />
+                        <img src="gfx/lw2.PNG" alt="" style="display:none" />
+                        <img src="gfx/Box_Red.JPG" alt="" style="display:none" />
+                        <img src="gfx/purpBox.png" alt="" style="display:none" />
+                        <img src="gfx/spot.png" alt="" style="display:none" />
+                        <img src="gfx/bspot.png" alt="" style="display:none" />
+                        <img src="gfx/bspot2.png" alt="" style="display:none" />
+                        <img src="gfx/block2.png" alt="" style="display:none" />
+                        <img src="gfx/spot2.png" alt="" style="display:none" />
+                        <img src="gfx/grass2.png" alt="" style="display:none" />
+                        <img src="gfx/purpBox1.png" alt="" style="display:none" />
+                        <img src="gfx/purpBox2.png" alt="" style="display:none" />
+                        <img src="gfx/purpBox3.png" alt="" style="display:none" />
+                        <img src="gfx/purpBox4.png" alt="" style="display:none" />
+                        <img src="gfx/purpBox5.png" alt="" style="display:none" />
+                        <img src="gfx/purpBox6.png" alt="" style="display:none" />
+                        <img src="gfx/purpBox7.png" alt="" style="display:none" />
+                        <img src="gfx/purpBox8.png" alt="" style="display:none" />
+                        <img src="gfx/b_purp_spot1.png" alt="" style="display:none" />
+                        <img src="gfx/b_purp_spot2.png" alt="" style="display:none" />
+                        <img src="gfx/b_purp_spot3.png" alt="" style="display:none" />
+                        <img src="gfx/b_purp_spot4.png" alt="" style="display:none" />
+                        <img src="gfx/b_purp_spot5.png" alt="" style="display:none" />
+                        <img src="gfx/b_purp_spot6.png" alt="" style="display:none" />
+                        <img src="gfx/b_purp_spot7.png" alt="" style="display:none" />
+                        <img src="gfx/b_purp_spot8.png" alt="" style="display:none" />
+                        <img src="gfx/b_orange_spot1.png" alt="" style="display:none" />
+                        <img src="gfx/b_orange_spot2.png" alt="" style="display:none" />
+                        <img src="gfx/b_orange_spot3.png" alt="" style="display:none" />
+                        <img src="gfx/b_orange_spot4.png" alt="" style="display:none" />
+                        <img src="gfx/b_orange_spot5.png" alt="" style="display:none" />
+                        <img src="gfx/b_orange_spot6.png" alt="" style="display:none" />
+                        <img src="gfx/b_orange_spot7.png" alt="" style="display:none" />
+                        <img src="gfx/b_orange_spot8.png" alt="" style="display:none" />
+                        <img src="gfx/orangeBox1.png" alt="" style="display:none" />
+                        <img src="gfx/orangeBox2.png" alt="" style="display:none" />
+                        <img src="gfx/orangeBox3.png" alt="" style="display:none" />
+                        <img src="gfx/orangeBox4.png" alt="" style="display:none" />
+                        <img src="gfx/orangeBox5.png" alt="" style="display:none" />
+                        <img src="gfx/orangeBox6.png" alt="" style="display:none" />
+                        <img src="gfx/orangeBox7.png" alt="" style="display:none" />
+                        <img src="gfx/orangeBox8.png" alt="" style="display:none" />
+
+
+
+            
+        <div id="hi" ng-view></div>
+
+
+ 
+    </body>
+    </html>
+    
+    
+
+    

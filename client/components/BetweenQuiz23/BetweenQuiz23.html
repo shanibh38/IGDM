@@ -1,0 +1,69 @@
+<div class="main_tit">Quiz - Q4</div>
+<div ng-click="BQ23.focus1()">
+    <div class="sub_tit">Note that to win, you have to place all the boxes to their hole in minimum moves.
+        <br> THERE IS NO IMPORTANCE TO THE ORDER OF THE BOXE'S NUMBER !!
+        <br> You have 10 minutes to solve the problem and answer the questions below.</div>
+    For focus the game - click on the area adjacent to the game, and for undo the focus - click on any other area not adjacent
+    to the game.
+    <div class="sub_tit">
+        <br> Timer :
+        <span id="demo23"></span>
+        <br>
+        <span>Number of moves : {{movesBQ23}} </span>
+        <br>
+    </div>
+</div>
+</div>
+<div ng-click="BQ23.focus2()">
+    <div id="experiment1" class="page">
+        <div id="widget-container">
+            <div id="canvas-container">
+
+            </div>
+            <div id="buttons-container">
+                <button id="reset" class="reset" ng-disabled="stopBQ23" ng-click="BQ23.reset()">Reset</button>
+                <button id="undo" class="undo" ng-disabled="stopBQ23" ng-click="BQ23.undo()"> Undo</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-click="BQ23.focus1()">
+
+    <form name="BQ23form" novalidate>
+        <p>1) What is the minimum moves you consider required to reach the goal?
+            <input name="moves" type="number" min="1" ng-model="moves" required/>
+        </p>
+        <p>2) Who is the first box you chose to <b>move</b> ?
+            <select name="uqf" id="under_BQ23_first" ng-model="uqf" required>
+                <option value=""></option>
+                <option value="1">Box number 1</option>
+                <option value="2">Box number 2</option>
+                <option value="3">Box number 3</option>
+                <option value="4">Box number 4</option>
+                <option value="5">Box number 5</option>
+                <option value="6">Box number 6</option>
+                <option value="7">Box number 7</option>
+                <option value="8">Box number 8</option>
+            </select>
+        </p>
+        <p>3) Given your first choice (in the previous question), Who is the second box you chose to <b>move</b> (after you finish to move with the first one) ?
+            <select name="uqs" id="under_BQ23_sec" ng-model="uqs" required>
+                <option value=""></option>
+                <option value="1">Box number 1</option>
+                <option value="2">Box number 2</option>
+                <option value="3">Box number 3</option>
+                <option value="4">Box number 4</option>
+                <option value="5">Box number 5</option>
+                <option value="6">Box number 6</option>
+                <option value="7">Box number 7</option>
+                <option value="8">Box number 8</option>
+            </select>
+        </p>
+    </form>
+    <b>You have to <span style="font-size: 25px; color: black">fill in all</span> the questions and <span style="font-size: 25px; color: black">solve</span> the game to continue.</b><br>
+
+    <button ng-click="BQ23.moveDmg()" ng-disabled="!(!(!(stopBQ23||isExpiredBQ23)||BQ23form.$invalid))">Continue</button>
+
+</div>
